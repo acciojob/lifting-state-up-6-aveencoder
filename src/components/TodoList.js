@@ -1,28 +1,22 @@
-import React from 'react'
+import React from "react";
 
-function TodoList({todo,onComplete}) {
+function TodoList({ todo, onComplete }) {
   return (
     <div>
-       <ul>
-         {
-          todo.map((todo)=>(
-            
-            <li>{todo.text}
-            {!todo.completed && (
-              <button onClick={()=>onComplete(todo.id)}>Complete</button>
+      <ul>
+        {todo.map((item) => (
+          <li key={item.id}>
+            {item.text}{" "}
+            {!item.completed && (
+              <button onClick={() => onComplete(item.id)}>Complete</button>
             )}
-            
-            </li>)
-            
-          )
-
-         }
-       </ul>
-
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default TodoList
+export default TodoList;
 
 
