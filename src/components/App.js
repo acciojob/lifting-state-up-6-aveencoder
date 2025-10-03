@@ -14,7 +14,7 @@ const App =()=>{
  // Function to update completion state
 
  const handleComplete = (id) =>{
-  const newTodos = todos.map((todo)=> todo.id === id ? {...todo, completed:true}: todo);
+  const newTodos = todos.map(todo=> todo.id === id ? {...todo, completed:true}: todo);
      setTodos(newTodos);
      
  }
@@ -23,7 +23,7 @@ const App =()=>{
  return(
      <div >
             <h1>Parent Component</h1>
-            <TodoList todo={todos} handleComplete={handleComplete}/>
+            <TodoList todos={todos} handleComplete={handleComplete}/>
      </div>
 
  
