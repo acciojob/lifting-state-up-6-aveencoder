@@ -21,9 +21,9 @@ const App =()=>{
 
 
  return(
-     <div style={{margin:"30px"}}>
-            <h1>Todo App (Lifting State Up Demo)</h1>
-            <TodoList todo={todos} onComplete={handleComplete}/>
+     <div >
+            <h1>Parent Component</h1>
+            <TodoList todo={todos} handleComplete={handleComplete}/>
      </div>
 
  
